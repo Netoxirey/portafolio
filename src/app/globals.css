@@ -3,25 +3,61 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    --primary: #4ca8cd;
+    --secondary: #b3daea;
+    --accent: #2e82a3;
+    --background: #ffffff;
+    --background-secondary: #f7faff;
+    --text: #000000;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background-color: var(--background);
+    color: var(--text);
 }
+
+@layer components {
+  .container-content {
+    @apply max-w-[90%] w-[1300px] mx-auto;
+  }
+  .bg-image {
+    @apply bg-cover bg-center bg-no-repeat;
+    background-image: url('/bgWhite.png');
+  }
+  .grid-two-columns {
+    @apply grid grid-cols-2 gap-4;
+  }
+  .btn-primary {
+    @apply py-2 px-4 flex justify-center gap-3 items-center  text-black font-semibold shadow-md transition-colors;
+        background-color: var(--primary);
+    }
+  .btn-primary:hover {
+        background-color: var(--accent);
+    }
+  .btn-secondary {
+    @apply py-2 px-4  flex justify-center gap-3 items-center  text-black  font-semibold  shadow-md transition-colors;
+        background-color: var(--secondary);
+    }
+  .btn-secondary:hover {
+        background-color: var(--accent);
+    }
+  .link-primary {
+    @apply text-lg transition-colors font-bold;
+    }
+  .link-primary:hover {
+    color: var(--accent);
+    }
+  .heading-primary {
+    @apply text-5xl font-black;
+    }
+  .heading-secondary {
+    @apply text-2xl font-bold;
+    }
+  .color-effect {
+    background: linear-gradient(120deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+  }
+
+
