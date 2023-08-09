@@ -13,7 +13,7 @@ function Home() {
 
   const [skills, setSkills] = useState([])
   useEffect(() => {
-    axios.get(process.env.NEXT_PUBLIC_API_SKILLS_URL)
+    axios.get("https://portafolio-lilac-six.vercel.app/skills")
     .then(res => setSkills(res.data)) // Actualiza el estado skills con los datos recibidos
     .catch(err => console.log(err))
   }, [])
