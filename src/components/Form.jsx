@@ -17,7 +17,7 @@ function Form() {
       setError(true);
       return;
     }
-    axios.post("http://localhost:3000/api/mail", JSON.stringify(data))
+    axios.post("https://portafolio-lilac-six.vercel.app/api/mail", JSON.stringify(data))
     .then(res => console.log(res))
     .catch(err => console.log(err))
     e.target.reset();

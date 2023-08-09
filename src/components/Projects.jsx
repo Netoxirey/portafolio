@@ -10,14 +10,14 @@ function Projects({skills}) {
   const [projectId , setProjectId] = useState('')
   const [singleProject, setSingleProject] = useState({})
   useEffect(() => {
-    axios.get("https://portafolio-lilac-six.vercel.app/projects")
+    axios.get("https://portafolio-lilac-six.vercel.app/api/projects")
       .then(res => {
         setProjects(res.data)
       })
       .catch(err => console.log(err))
   }, [])
   useEffect(() => {
-    axios.get(`https://portafolio-lilac-six.vercel.app/projects${projectId}`)
+    axios.get(`https://portafolio-lilac-six.vercel.app/api/projects${projectId}`)
       .then(res => {
         setSingleProject(res.data)
       })

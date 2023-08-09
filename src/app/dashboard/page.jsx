@@ -37,7 +37,7 @@ const ProjectForm = () => {
       return;
     }
     axios
-      .post("https://portafolio-lilac-six.vercel.app/projects", JSON.stringify(project))
+      .post("https://portafolio-lilac-six.vercel.app/api/projects", JSON.stringify(project))
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   };

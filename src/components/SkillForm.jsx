@@ -35,7 +35,7 @@ const SkillForm = () => {
     }
 
     axios
-      .post("https://portafolio-lilac-six.vercel.app/skills", JSON.stringify(skill))
+      .post("https://portafolio-lilac-six.vercel.app/api/skills", JSON.stringify(skill))
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   };
