@@ -10,7 +10,7 @@ function Projects({skills}) {
   const [projectId , setProjectId] = useState('')
   const [singleProject, setSingleProject] = useState({})
   useEffect(() => {
-    axios.get()
+    axios.get(process.env.NEXT_PUBLIC_API_PROJECTS_URL)
       .then(res => {
         setProjects(res.data)
       })
