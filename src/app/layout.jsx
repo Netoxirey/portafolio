@@ -1,8 +1,12 @@
 import NavBar from '@/components/NavBar'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
+import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+  weight: ["400", "700", "900"],
+  subsets: ["latin-ext"],
+ })
 
 export const metadata = {
   title: 'Ernesto Serna Portfolio',
@@ -15,10 +19,12 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/logo.svg" />
       </head>
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <NavBar />
         {children}
+        <Footer />
         </body>
+       
     </html>
   )
 }

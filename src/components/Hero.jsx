@@ -17,16 +17,9 @@ function Hero() {
                   <Image src="/linkedin-icon.svg" alt="html" width={80} height={80} className="hover:scale-110 transition-transform" />
                 </Link>
               </div>
-              <div className="flex gap-3 mt-auto">
-                <a href="/Ernesto Serna Guerrero Resume.pdf" download="ErnestoSernaResume.pdf" target="_blank" className="btn-primary rounded">
-                Download CV 
-                <Image src="/arrow-down.svg" width={30} height={30} alt="arrow down"/>
+                <a href="/Ernesto Serna Guerrero Resume.pdf" download="ErnestoSernaResume.pdf" target="_blank" className="mt-auto">
+                  <button className="btn btn-primary rounded-md md:w-auto w-full py-4">Download Resume<Image src="/arrow-down.svg" width={30} height={30} alt="arrow down"/></button>
                 </a>
-                <button className="btn-secondary rounded">
-                  Contact Me
-                  <Image src="/mail-icon.svg" width={30} height={30} alt="mail icon"/>
-                  </button>
-              </div>
               </RevealList>
               <RevealWrapper rotate={{x:  12,y:40,z:0}} origin='bottom' delay={200} duration={1000} distance='500px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:5}}>
               <Image src="/hero-image.svg" alt="logo" width={600} height={600} />

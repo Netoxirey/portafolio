@@ -37,7 +37,7 @@ const ProjectForm = () => {
       return;
     }
     axios
-      .post("http://localhost:3000/api/projects", JSON.stringify(project))
+      .post(process.env.NEXT_PUBLIC_API_PROJECTS_URL, JSON.stringify(project))
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   };

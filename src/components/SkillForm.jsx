@@ -35,7 +35,7 @@ const SkillForm = () => {
     }
 
     axios
-      .post("http://localhost:3000/api/skills", JSON.stringify(skill))
+      .post(process.env.NEXT_PUBLIC_API_SKILLS_URL, JSON.stringify(skill))
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   };
