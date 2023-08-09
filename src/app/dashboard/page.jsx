@@ -9,9 +9,9 @@ const ProjectForm = () => {
     const file = e.target.files[0];
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("upload_preset", gtzcv0a1);
+    formData.append("upload_preset", process.env.NEXT_PUBLIC_CLOUDINARY_PRESET );
     axios
-      .post(`https://api.cloudinary.com/v1_1/dzxu3irpg/image/upload`, formData)
+      .post(`https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUD_NAME}/image/upload`, formData)
       .then((res) => setImage(res.data.secure_url))
       .catch((err) => console.log(err));
   };
@@ -37,7 +37,7 @@ const ProjectForm = () => {
       return;
     }
     axios
-      .post("https://portafolio-lilac-six.vercel.app/api/projects", JSON.stringify(project))
+      .post(process.env.NEXT_PUBLIC_API_URL_PROJECTS, JSON.stringify(project))
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   };
