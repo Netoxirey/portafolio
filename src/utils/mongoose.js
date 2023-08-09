@@ -9,13 +9,11 @@ export async function connectDB() {
         return;
     }
 
-    const db = await connect(process.env.NEXT_PUBLIC_MONGO_URI);
-    console.log(db.connection.db.databaseName);
+    const db = await connect(process.env.MONGODB_URI);
     conn.isConnected = db.connections[0].readyState;
 }
 
 connection.on("connected", () => {
-    console.log("Mongoose connected to db");
 });
 
 connection.on("error", (err) => {
