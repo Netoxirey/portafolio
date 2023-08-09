@@ -9,7 +9,7 @@ export async function connectDB() {
         return;
     }
 
-    const db = await connect("mongodb+srv://ernestoserna:n5e5t5o5@cluster0.hwagn7l.mongodb.net/portfolio");
+    const db = await connect(process.env.MONGODB_URI);
     console.log(db.connection.db.databaseName);
     conn.isConnected = db.connections[0].readyState;
 }
