@@ -8,7 +8,7 @@ function Hero() {
         <div className="container-content md:grid-two-columns flex flex-col gap-10">
               <RevealList className="flex flex-col gap-5" interval={60} delay={500}>
               <h1 className="heading-primary">Ernesto Serna - <span className="color-effect">Full Stack Developer</span></h1>
-              <p className="heading-secondary">Building innovative and scalable solutions for the digital world. Discover my full stack portfolio and see how I can help you achieve your tech goals!</p>
+              <p className="text-2xl">Building innovative and scalable solutions for the digital world. Discover my full stack portfolio and see how I can help you achieve your tech goals!</p>
               <div className="flex md:justify-normal justify-center gap-3">
                 <Link href="https://github.com/Netoxirey">
                   <Image src="/github-icon.svg" alt="html" width={80} height={80} className="hover:scale-110 transition-transform" />

@@ -31,21 +31,21 @@ body {
     @apply grid grid-cols-2 gap-4;
   }
   .btn-primary {
-    @apply py-2 px-4 flex justify-center gap-3 items-center  text-black font-semibold shadow-md transition-colors;
+    @apply py-2 px-4 flex justify-center gap-3 items-center  text-black  shadow-md transition-colors;
         background-color: var(--primary);
     }
   .btn-primary:hover {
         background-color: var(--accent);
     }
   .btn-secondary {
-    @apply py-2 px-4  flex justify-center gap-3 items-center  text-black  font-semibold  shadow-md transition-colors;
+    @apply py-2 px-4  flex justify-center gap-3 items-center  text-black    shadow-md transition-colors;
         background-color: var(--secondary);
     }
   .btn-secondary:hover {
         background-color: var(--accent);
     }
   .link-primary {
-    @apply text-lg transition-colors font-bold;
+    @apply text-lg transition-colors;
     }
   .link-primary:hover {
     color: var(--accent);
