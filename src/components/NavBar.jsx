@@ -40,13 +40,13 @@ function NavBar() {
             <Link href="/" className='link-primary'>
                 Home
             </Link>
-            <Link href="/about" className='link-primary'>
+            <Link href="#about" className='link-primary'>
                 About
             </Link>
-            <Link href="/projects" className='link-primary'>
+            <Link href="#projects" className='link-primary'>
                 Projects
             </Link>
-            <Link href="/contact">
+            <Link href="#contact">
                 <button className='btn-primary rounded-full'>Contact</button>
             </Link>
         </nav>
