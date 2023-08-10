@@ -7,9 +7,9 @@ import {useState} from 'react'
 function NavBar() {
     const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <header className='border sticky top-0 z-50 bg-white'>
-        <nav className='flex justify-between items-center container-content mx-auto py-5'>
-        <Image src="/logo.svg" alt="logo" width={40} height={40} />
+    <header className='border py-2 sticky top-0 z-50 bg-white'>
+        <nav className='flex justify-between items-center container-content mx-auto'>
+        <Image src="/logo.svg" alt="logo" width={50} height={50} />
             <ul className='md:flex items-center gap-5 hidden '>
                 <li>
                     <Link href="/" className='link-primary'>
@@ -28,7 +28,7 @@ function NavBar() {
                 </li>
                 <li>
                     <Link href="#contact">
-                        <button className='btn-primary rounded-full'>Contact</button>
+                        <button className='btn-primary rounded-full'>Contact <Image src='/mail-icon.svg' width={20} height={20} alt='mail icon'/></button>
                     </Link>
                 </li>
             </ul>
@@ -47,7 +47,7 @@ function NavBar() {
                 Projects
             </Link>
             <Link href="#contact">
-                <button className='btn-primary rounded-full'>Contact</button>
+                <button className='btn-primary rounded-full'>Contact <Image src='/mail-icon.svg' width={20} height={20} alt='mail icon'/></button>
             </Link>
         </nav>
     </header>

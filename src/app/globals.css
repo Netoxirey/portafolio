@@ -69,7 +69,7 @@ body {
     transition: width 0.3s ease-in-out;
     }
     .mobile-menu-active {
-    @apply w-1/3;
+    @apply w-2/5;
     }
     .overlay {
       @apply flex flex-col justify-center w-full  h-full bg-card absolute  scale-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 uppercase transition-transform;

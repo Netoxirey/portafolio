@@ -1,10 +1,5 @@
-'use client'
-function Footer() {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-    };
 
+function Footer() {
     return (
         <footer className='w-full mt-96 py-20 bg-[#4ca8cd]'>
             <div className='container-content flex justify-between'>
