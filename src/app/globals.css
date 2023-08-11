@@ -65,7 +65,7 @@ body {
     background-color: rgb(46, 130, 163 , 0.8);
     }
   .mobile-menu {
-    @apply fixed top-20 right-0 h-full w-0 overflow-hidden bg-white z-50 flex flex-col justify-center items-center gap-4;
+    @apply fixed top-12 right-0 h-full w-0 overflow-hidden bg-white z-50 flex flex-col justify-center items-center gap-4;
     transition: width 0.3s ease-in-out;
     }
     .mobile-menu-active {
