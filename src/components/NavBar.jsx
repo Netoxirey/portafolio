@@ -32,8 +32,11 @@ function NavBar() {
                     </Link>
                 </li>
             </ul>
-            <button className='md:hidden z-50' onClick={() => setNavbarOpen((prevState) => !prevState)}>
-                <Image src={`${navbarOpen ? "/cross-icon.svg": "menu-icon.svg"}`} alt="sun icon" width={40} height={40} />
+            <button className='md:hidden z-50' 
+            onClick={() => setNavbarOpen((prevState) => !prevState)}>
+                <Image src={`${navbarOpen ? "/cross-icon.svg": "menu-icon.svg"}`} 
+                alt="sun icon" 
+                width={40} height={40} />
             </button>
         </nav>
         <nav className={`mobile-menu ${navbarOpen && "mobile-menu-active"}`}>
@@ -47,7 +50,11 @@ function NavBar() {
                 Projects
             </Link>
             <Link href="#contact">
-                <button className='btn-primary rounded-full'>Contact <Image src='/mail-icon.svg' width={20} height={20} alt='mail icon'/></button>
+                <button className='btn-primary rounded-full'>
+                    Contact 
+                    <Image src='/mail-icon.svg' alt='mail icon'
+                    width={20} height={20} />
+                    </button>
             </Link>
         </nav>
     </header>

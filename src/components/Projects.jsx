@@ -32,17 +32,31 @@ function Projects({skills}) {
     skillsImages[skill.name] = skill.imageUrl
   })
   return (
-    <section className="my-64 container-content" id='projects'>
-        <h2 className="heading-primary text-center">My Projects</h2>
-        <div className="md:grid-two-columns grid grid-cols-1 gap-5 mt-10">
+    <section className="mt-72 mb-20 container-content" id='projects'>
+        <Image src="/code-icon.svg" alt="code icon"
+        width={100} height={100}
+        className='mx-auto'
+        />
+        <h2 className="heading-primary text-center mt-10">My Projects</h2>
+        <div className="md:grid-two-columns grid grid-cols-1 gap-5 mt-20">
           {projects.map(project => (
-            <RevealWrapper key={project._id} className="shadow-xl overflow-hidden relative group">
-              <Image width={600} height={600} src={project.imageUrl} alt={project.name} className='w-full group-hover:scale-125 transition-transform' />
+            <RevealWrapper key={project._id} 
+            className="shadow-xl overflow-hidden relative group">
+              <Image width={600} height={600} 
+              src={project.imageUrl} alt={project.name} 
+              className='w-full group-hover:scale-125 transition-transform' />
               <div className="overlay group-hover:scale-100">
                 <h2 className='heading-secondary text-center text-white'>{project.name}</h2>
                 <div className='flex justify-center mt-5 gap-3'>
-                  <Link href={project.demoUrl} target='_blank'><button className="btn-primary bg-transparent text-white border rounded-full">Visit Demo</button></Link>
-                  <button className='btn-primary bg-transparent text-white border rounded-full' onClick={() =>{handleClick(project._id)}}>More Info</button>
+                  <Link href={project.demoUrl} target='_blank'>
+                    <button className="btn-primary bg-transparent text-white border rounded-full">
+                      Visit Demo
+                      </button>
+                      </Link>
+                  <button className='btn-primary bg-transparent text-white border rounded-full' 
+                  onClick={() =>{handleClick(project._id)}}>
+                    More Info
+                    </button>
                 </div>
               </div>
             </RevealWrapper>
@@ -50,8 +64,15 @@ function Projects({skills}) {
         </div>
         <div className={`modal ${modal &&"modal-active"}`}>
           <div className={`flex flex-col relative gap-5 justify-center container-content rounded-3xl overflow-hidden bg-[#f7faff] shadow-2xl transition-transform ${ modal ? "scale-100": "scale-0"}`}>
-            <button className="bg-white absolute top-10 right-10 rounded-full p-2" onClick={() => setModal(false)}><Image src="/cross-icon.svg" width={30} height={30} alt='cross icon'/></button>
-            <Image width={1300} height={1300} src={singleProject.imageUrl} alt={singleProject.name} className='w-full' />
+            <button className="bg-white absolute top-10 right-10 rounded-full p-2" 
+            onClick={() => setModal(false)}>
+              <Image src="/cross-icon.svg" 
+              width={30} height={30} 
+              alt='cross icon'/>
+              </button>
+            <Image width={1300} height={1300} 
+            src={singleProject.imageUrl} alt={singleProject.name} 
+            className='w-full' />
             <div className=' flex flex-col  gap-3 py-10'>
               <h2 className='uppercase heading-secondary text-center'>{singleProject.name}</h2>
               <div className='flex flex-wrap justify-center gap-3'>

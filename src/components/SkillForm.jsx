@@ -43,11 +43,17 @@ const SkillForm = () => {
   return (
     <div>
       <h3>New Skill:</h3>
-      <form className="flex flex-col gap-3 bg-slate-900 text-white" onSubmit={handleSubmit}>
+      <form className="flex flex-col gap-3 bg-slate-900 text-white" 
+      onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
-        <input className="border bg-neutral-950" type="text" name="name" />
+        <input className="border bg-neutral-950" 
+        type="text" 
+        name="name" />
         <label htmlFor="imageUrl">Image</label>
-        <input className="border bg-neutral-950" type="file" name="file" onChange={handleChange} />
+        <input className="border bg-neutral-950" 
+        type="file" 
+        name="file" 
+        onChange={handleChange} />
         <button type="submit">Submit</button>
       </form>
     </div>
