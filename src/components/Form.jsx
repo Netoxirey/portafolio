@@ -52,11 +52,11 @@ function Form() {
         </textarea>
         <button 
         className='btn-primary w-3/4 rounded-lg mt-auto text-lg'
-        type='submit'
-        >Send
-        <Image src='/send-email-icon.svg' alt='send email icon'
-        width={25} height={25}
-        />
+        type='submit'>
+          <Image src='/send-email-icon.svg' alt='send email icon'
+          width={25} height={25}
+          />
+          Send
         </button>
       </RevealWrapper>
       {success && (

@@ -28,7 +28,12 @@ function NavBar() {
                 </li>
                 <li>
                     <Link href="#contact">
-                        <button className='btn-primary rounded-full'>Contact <Image src='/mail-icon.svg' width={20} height={20} alt='mail icon'/></button>
+                        <button 
+                        className='btn-primary rounded-full'>
+                            <Image src='/mail-icon.svg' alt='mail icon'
+                            width={20} height={20} />
+                            Contact
+                        </button>
                     </Link>
                 </li>
             </ul>
@@ -51,10 +56,11 @@ function NavBar() {
             </Link>
             <Link href="#contact">
                 <button className='btn-primary rounded-full'>
-                    Contact 
                     <Image src='/mail-icon.svg' alt='mail icon'
-                    width={20} height={20} />
-                    </button>
+                    width={20} height={20} 
+                    />
+                    Contact 
+                </button>
             </Link>
         </nav>
     </header>

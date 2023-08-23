@@ -32,9 +32,10 @@ function Hero() {
                 target="_blank" 
                 className="mt-auto">
                   <button className="btn btn-primary rounded-md md:w-auto w-full py-4">
-                    Download Resume
                   <Image src="/arrow-down.svg" alt="arrow down"
-                  width={30} height={30} />
+                  width={30} height={30} 
+                  />
+                    Download Resume
                   </button>
                 </a>
               </RevealList>
